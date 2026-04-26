@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen active">
+        <div class="start-card">
+            <h1>Coding Quiz App</h1>
+            <p class="subtitle">Test your knowledge in HTML, CSS, and JavaScript</p>
+            <button id="startBtn" class="primary-btn">Start Quiz</button>
+        </div>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quizContainer" class="screen">
+        <div class="quiz-card">
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-text">
+                    <span id="questionNumber">Question 1</span>
+                    <span id="totalQuestions">of 18</span>
+                    <span id="timerDisplay" class="timer-display hidden">Time Left: <span id="timerValue">15</span>s</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Question Section -->
+            <div class="question-section">
+                <h2 id="questionText"></h2>
+                <div id="optionsContainer" class="options-container"></div>
+            </div>
+
+            <!-- Explanation Section -->
+            <div id="explanationSection" class="explanation-section hidden">
+                <div class="explanation-content">
+                    <h3>Explanation:</h3>
+                    <p id="explanationText"></p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="skipBtn" class="skip-btn">Skip Question</button>
+                <button id="nextBtn" class="next-btn hidden">Next Question</button>
+                <button id="submitBtn" class="submit-btn hidden">Submit Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="resultScreen" class="screen">
+        <div class="result-card">
+            <h2>Quiz Complete!</h2>
+            <div class="score-display">
+                <div class="score-number">
+                    <span id="scoreText">0</span>
+                    <span class="score-total">/18</span>
+                </div>
+                <div class="percentage">
+                    <span id="percentageText">0%</span>
+                </div>
+            </div>
+            <div id="performanceMessage" class="performance-message"></div>
+            
+            <div class="result-buttons">
+                <button id="viewReportBtn" class="secondary-btn">View Report</button>
+                <button id="restartBtn" class="primary-btn">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Report Section -->
+    <div id="reportSection" class="report-section">
+    <div class="report-card">
+        <div class="report-header">
+            <h2>Report</h2>
+            <button id="closeReportBtn" class="close-btn">&times;</button>
+        </div>
+        <div class="stats-section">
+            <div class="stats-cards">
+                <div class="stat-card correct">
+                    <span class="stat-number" id="correctCount">0</span>
+                    <span class="stat-label">Correct</span>
+                </div>
+                <div class="stat-card wrong">
+                    <span class="stat-number" id="wrongCount">0</span>
+                    <span class="stat-label">Wrong</span>
+                </div>
+                <div class="stat-card skipped">
+                    <span class="stat-number" id="skippedCount">0</span>
+                    <span class="stat-label">Skipped</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="reportChart"></canvas>
+            </div>
+        </div>
+        <div id="reportContent" class="report-content"></div>
+    </div>
+</div>
+
+    <!-- Confetti Container -->
+    <div id="confettiContainer" class="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
