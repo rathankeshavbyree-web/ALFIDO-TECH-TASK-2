@@ -20,7 +20,7 @@ An interactive coding quiz application built using HTML, CSS, and JavaScript. It
 - Chart.js
 
 ## Live Demo
-[Add your deployed link here]
+https://alfido-tech-task-2-6mqh.vercel.app/
 
 ## How to Run
 1. Clone the repository
@@ -60,7 +60,7 @@ An interactive coding quiz application built using HTML, CSS, and JavaScript. It
 - **Confetti Celebration**: Animated confetti for high scores
 
 ## Documentation
-[Add your documentation link here]
+https://docs.google.com/document/d/1FYbDszXhG5Yi9JwbC0n_nPsEgTXUeW03nKiX2nzIeAw/edit?usp=sharing
 
 ## Author
 BYREE RATHAN KESHAV
